@@ -26,10 +26,11 @@ var cardsInPlay = [];
 var checkForMatch = function() {
   if (cardsInPlay[0] === cardsInPlay[1]) {
     alert ("You have found a match! Do you want to play again?");
+    location.reload();
   } else {
     alert ("Sorry, try again.");
-    flipcard.reload();
-  }
+    location.reload();
+}
 }
 var flipCard = function() {
 var cardId = this.getAttribute('data-id');
