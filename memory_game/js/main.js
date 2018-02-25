@@ -25,12 +25,11 @@ var cardsInPlay = [];
 
 var checkForMatch = function() {
   if (cardsInPlay[0] === cardsInPlay[1]) {
-    alert ("You have found a match! Do you want to play again?");
-    location.reload();
-  } else {
-    alert ("Sorry, try again.");
-    location.reload();
-}
+    alert ("You have found a match! Do you want to play again? Press the Game link below!");
+  }
+          else {
+    alert ("Sorry, try again. Press the Game link below!");
+    }
 }
 var flipCard = function() {
 var cardId = this.getAttribute('data-id');
@@ -42,7 +41,8 @@ this.setAttribute('src', cards[cardId].cardImage);
 if (cardsInPlay.length === 2) {
   checkForMatch();
 }
-}
+};
+
 var createBoard = function (){
 for (var i = 0; i < cards.length; i++) {
 var cardElement = document.createElement('img');
